@@ -1,0 +1,73 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    width: 900px;
+    height: 900px;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns:repeat(4,1fr) ;
+    grid-template-rows: 595px 300px;
+    gap: 5px;
+}
+.container > div{
+    width: 100%;
+    height: 100%;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Junji{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.Kaede{
+    grid-column: 3/5;
+    grid-row: 1/2;
+}
+@media (max-width:568px) {
+    body{
+        background-color: black;
+    }
+    .container{
+        width: auto;
+        grid-template-columns:repeat(1,auto) ;
+        grid-template-rows: repeat(6,1fr);
+        grid-template-areas: 
+        "Junji"
+        "Kaede"
+        "Mao"
+        "Miyu"
+        "Momoyo"
+        "Yusuke"
+        ;
+    }
+    .Junji{
+        grid-area: Junji;
+    }
+    .Kaede{
+        grid-area: Kaede;
+    }
+    .Mao{
+        grid-area: Mao
+    }
+    .Miyu{
+        grid-area: Miyu
+    }
+    .Momoyo{
+        grid-area: Momoyo;
+    }
+    .Yusuke{
+        grid-area: Yusuke;
+    }
+
+}
